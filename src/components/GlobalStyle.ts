@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from '../styled-components'
 
 const GlobalStyle = createGlobalStyle`
   *,
@@ -10,11 +10,11 @@ const GlobalStyle = createGlobalStyle`
   body {
     box-sizing: border-box;
     margin: 0;
-    font-family: system-ui, sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #343a40;
-    background-color: #f1f3f5;
+    font-family: ${props => props.theme.fonts.sans};
+    font-size: 16px;
+    line-height: ${props => props.theme.lineHeights.normal};
+    color: ${props => props.theme.colors.grayAlpha[9]};
+    background-color: ${props => props.theme.colors.gray[1]};
   }
 `
 

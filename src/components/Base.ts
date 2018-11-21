@@ -1,4 +1,5 @@
-import styled, { CSSObject } from 'styled-components'
+import { CSSObject } from 'styled-components'
+import styled from '../styled-components'
 
 interface BaseProps {
   css?: CSSObject
