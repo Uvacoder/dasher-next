@@ -1,12 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { Router } from '@reach/router'
+import React, { Fragment } from 'react'
+import ReactDOM from 'react-dom'
+import GlobalStyle from './components/GlobalStyle'
+import Board from './pages/Board'
+import Home from './pages/Home'
+import NotFound from './pages/NotFound'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const App = () => {
+  return (
+    <Fragment>
+      <GlobalStyle />
+      <Router>
+        <Home path="/" />
+        <Board path="/board/:boardId" />
+        <NotFound default />
+      </Router>
+    </Fragment>
+  )
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(<App />, document.getElementById('root'))
