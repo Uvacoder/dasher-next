@@ -5,7 +5,7 @@ import Column from './Column'
 import Flex from './Flex'
 
 interface ColumnListProps {
-  columns: Array<Column>
+  columns: Column[]
   css?: CSSObject
 }
 

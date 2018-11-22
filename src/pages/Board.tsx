@@ -13,7 +13,7 @@ interface BoardProps extends RouteComponentProps {
 interface Board {
   name: string
   query: string
-  columns: Array<Column>
+  columns: Column[]
 }
 
 const board: Board = {

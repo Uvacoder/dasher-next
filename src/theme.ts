@@ -2,12 +2,12 @@ import colors from 'open-color'
 import toAlpha from './utils/toAlpha'
 
 export interface Theme {
-  spacing: Array<string>
+  spacing: string[]
   fonts: {
     sans: string
     mono: string
   }
-  fontSizes: Array<string>
+  fontSizes: string[]
   fontWeights: {
     normal: number
     medium: number
@@ -21,16 +21,16 @@ export interface Theme {
     loose: number
   }
   colors: {
-    primary: Array<string>
-    red: Array<string>
-    green: Array<string>
-    violet: Array<string>
-    gray: Array<string>
-    grayAlpha: Array<string>
+    primary: string[]
+    red: string[]
+    green: string[]
+    violet: string[]
+    gray: string[]
+    grayAlpha: string[]
     white: string
     black: string
   }
-  radii: Array<string>
+  radii: string[]
 }
 
 const theme: Theme = {
@@ -107,7 +107,7 @@ const theme: Theme = {
   radii: ['0', '2px', '4px', '6px'],
 }
 
-function fontStack(fonts: Array<string>) {
+function fontStack(fonts: string[]) {
   return fonts
     .map(font => (font.indexOf(' ') !== -1 ? `"${font}"` : font))
     .join(', ')

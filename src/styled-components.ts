@@ -1,7 +1,6 @@
 // Source: https://www.styled-components.com/docs/api#define-a-theme-interface
 
 import * as styledComponents from 'styled-components'
-import { ThemedStyledComponentsModule } from 'styled-components'
 import { Theme } from './theme'
 
 const {
@@ -11,7 +10,7 @@ const {
   keyframes,
   ThemeContext,
   ThemeProvider,
-} = styledComponents as ThemedStyledComponentsModule<Theme>
+} = styledComponents as styledComponents.ThemedStyledComponentsModule<Theme>
 
 export { css, createGlobalStyle, keyframes, ThemeContext, ThemeProvider }
 export default styled

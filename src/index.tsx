@@ -16,7 +16,7 @@ const App = () => {
         <Router>
           <Home path="/" />
           <Board path="/board/:boardId" />
-          <NotFound default />
+          <NotFound default={true} />
         </Router>
       </Fragment>
     </ThemeProvider>

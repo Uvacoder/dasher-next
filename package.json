@@ -6,7 +6,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "tslint 'src/**/*.{ts,tsx}'",
+    "format": "prettier --write '**/*.{ts,tsx,json,md,html}'"
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
@@ -24,7 +26,11 @@
     "@types/reach__router": "^1.2.2",
     "@types/react": "16.7.6",
     "@types/react-dom": "16.0.9",
-    "@types/styled-components": "^4.1.0"
+    "@types/styled-components": "^4.1.0",
+    "prettier": "^1.15.2",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.16.0",
+    "tslint-react": "^3.6.0"
   },
   "eslintConfig": {
     "extends": "react-app"
