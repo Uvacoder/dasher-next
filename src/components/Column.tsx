@@ -26,7 +26,7 @@ const Column = ({ column, css }: ColumnProps) => {
         width: '400px',
         padding: theme.spacing[4],
         backgroundColor: theme.colors.white,
-        borderRadius: '6px',
+        borderRadius: theme.radii[3],
         boxShadow: '0 1px 1px 1px rgba(0, 35, 70, 0.09)',
         ...css,
       }}

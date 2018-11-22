@@ -30,6 +30,7 @@ export interface Theme {
     white: string
     black: string
   }
+  radii: Array<string>
 }
 
 const theme: Theme = {
@@ -103,6 +104,7 @@ const theme: Theme = {
     white: colors.white,
     black: colors.black,
   },
+  radii: ['0', '2px', '4px', '6px'],
 }
 
 function fontStack(fonts: Array<string>) {
