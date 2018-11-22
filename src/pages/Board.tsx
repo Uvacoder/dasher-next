@@ -11,18 +11,20 @@ interface BoardProps extends RouteComponentProps {
 }
 
 interface Board {
+  id: string
   name: string
   query: string
   columns: Column[]
 }
 
 const board: Board = {
+  id: 'board-1',
   name: 'Board 1',
   query: 'org:primer',
   columns: [
-    { name: 'Column 1', query: 'is:open' },
-    { name: 'Column 2', query: 'is:open' },
-    { name: 'Column 3', query: 'is:open' },
+    { id: 'column-1', index: 0, name: 'Column 1', query: 'is:open' },
+    { id: 'column-2', index: 1, name: 'Column 2', query: 'is:open' },
+    { id: 'column-3', index: 2, name: 'Column 3', query: 'is:open' },
   ],
 }
 

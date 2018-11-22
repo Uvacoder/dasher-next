@@ -9,6 +9,8 @@ interface ColumnProps {
 }
 
 interface Column {
+  id: string
+  index: number
   name: string
   query: string
 }
