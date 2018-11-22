@@ -19,7 +19,6 @@ const data = {
 
 const Board = ({ boardId }: BoardProps) => {
   const theme = useTheme()
-
   const name = `Board ${boardId}`
   const query = 'org:feathericons'
 
@@ -29,20 +28,20 @@ const Board = ({ boardId }: BoardProps) => {
         css={{
           alignItems: 'center',
           flexShrink: 0,
-          height: '48px',
-          padding: '0 16px',
+          height: 48,
+          padding: `0 ${theme.spacing[4]}`,
           borderBottom: `1px solid ${theme.colors.grayAlpha[2]}`,
         }}
       >
         <Link to="/">Home</Link>
       </Flex>
       <Flex css={{ flexDirection: 'column', flexGrow: 1 }}>
-        <Base css={{ padding: '48px' }}>
+        <Base css={{ padding: theme.spacing[9] }}>
           <Base
             as="h1"
             css={{
-              margin: '0 0 8px',
-              fontSize: '36px',
+              margin: `0 0 ${theme.spacing[2]}`,
+              fontSize: theme.fontSizes[7],
               fontWeight: theme.fontWeights.bold,
               lineHeight: theme.lineHeights.tight,
             }}
@@ -66,9 +65,14 @@ const Board = ({ boardId }: BoardProps) => {
             WebkitOverflowScrolling: 'touch',
           }}
         >
-          <Flex css={{ flexGrow: 1, padding: '0 48px 48px' }}>
+          <Flex
+            css={{
+              flexGrow: 1,
+              padding: `0 ${theme.spacing[9]} ${theme.spacing[9]}`,
+            }}
+          >
             {data.columns.map(column => (
-              <Column column={column} css={{ marginRight: '16px' }} />
+              <Column column={column} css={{ marginRight: theme.spacing[4] }} />
             ))}
           </Flex>
         </Flex>

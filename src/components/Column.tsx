@@ -15,7 +15,6 @@ interface Column {
 
 const Column = ({ column, css }: ColumnProps) => {
   const theme = useTheme()
-
   const [name, setName] = useState(column.name)
   const [query, setQuery] = useState(column.query)
 
@@ -25,7 +24,7 @@ const Column = ({ column, css }: ColumnProps) => {
         flexDirection: 'column',
         flexShrink: 0,
         width: '400px',
-        padding: '16px',
+        padding: theme.spacing[4],
         backgroundColor: theme.colors.white,
         borderRadius: '6px',
         boxShadow: '0 1px 1px 1px rgba(0, 35, 70, 0.09)',

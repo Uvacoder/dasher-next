@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     font-family: ${props => props.theme.fonts.sans};
-    font-size: 16px;
+    font-size: ${props => props.theme.fontSizes[2]};
     line-height: ${props => props.theme.lineHeights.normal};
     color: ${props => props.theme.colors.grayAlpha[9]};
     background-color: ${props => props.theme.colors.gray[1]};
