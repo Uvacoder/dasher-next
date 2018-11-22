@@ -1,8 +1,8 @@
 import { Link, RouteComponentProps } from '@reach/router'
 import React from 'react'
-import Base from '../components/Base'
 import Column from '../components/Column'
 import ColumnList from '../components/ColumnList'
+import Editable from '../components/Editable'
 import Flex from '../components/Flex'
 import useTheme from '../utils/useTheme'
 
@@ -43,28 +43,32 @@ const Board = ({ boardId }: BoardProps) => {
         <Link to="/">Home</Link>
       </Flex>
       <Flex css={{ flexDirection: 'column', flexGrow: 1 }}>
-        <Base css={{ padding: theme.spacing[9] }}>
-          <Base
-            as="h1"
+        <Flex
+          css={{
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            padding: theme.spacing[9],
+          }}
+        >
+          <Editable
+            // h1
+            html={board.name}
             css={{
               margin: `0 0 ${theme.spacing[2]}`,
               fontSize: theme.fontSizes[7],
               fontWeight: theme.fontWeights.bold,
               lineHeight: theme.lineHeights.tight,
             }}
-          >
-            {board.name}
-          </Base>
-          <Base
-            as="span"
+          />
+          <Editable
+            // span
+            html={board.query}
             css={{
               fontFamily: theme.fonts.mono,
               color: theme.colors.grayAlpha[7],
             }}
-          >
-            {board.query}
-          </Base>
-        </Base>
+          />
+        </Flex>
         <Flex
           css={{
             flexGrow: 1,
