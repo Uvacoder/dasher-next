@@ -51,7 +51,6 @@ const board: Board = {
 
 const Board = ({ boardId }: BoardProps) => {
   const theme = useTheme()
-
   return (
     <Flex css={{ flexDirection: 'column', height: '100vh' }}>
       <Flex
@@ -68,6 +67,7 @@ const Board = ({ boardId }: BoardProps) => {
       <Flex css={{ flexDirection: 'column', flexGrow: 1 }}>
         <Flex
           css={{
+            flexShrink: 0,
             flexDirection: 'column',
             alignItems: 'flex-start',
             padding: theme.spacing[9],
@@ -96,6 +96,7 @@ const Board = ({ boardId }: BoardProps) => {
         <Flex
           css={{
             flexGrow: 1,
+            flexShrink: 0,
             overflowX: 'auto',
             WebkitOverflowScrolling: 'touch',
           }}

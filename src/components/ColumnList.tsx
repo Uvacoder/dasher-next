@@ -11,9 +11,8 @@ interface ColumnListProps {
 
 const ColumnList = ({ columns, css }: ColumnListProps) => {
   const theme = useTheme()
-
   return (
-    <Flex css={css}>
+    <Flex css={{ alignItems: 'flex-start', ...css }}>
       {columns.map(column => (
         <Column
           key={column.id}
