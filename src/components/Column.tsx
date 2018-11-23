@@ -3,6 +3,7 @@ import { CSSObject } from 'styled-components'
 import useTheme from '../utils/useTheme'
 import ColumnHeader from './ColumnHeader'
 import Flex from './Flex'
+import IssueList from './IssueList'
 
 interface ColumnProps {
   column: Column
@@ -20,7 +21,6 @@ const Column = ({ column, css }: ColumnProps) => {
   const theme = useTheme()
   const [name, setName] = useState(column.name)
   const [query, setQuery] = useState(column.query)
-
   return (
     <Flex
       css={{
@@ -34,6 +34,7 @@ const Column = ({ column, css }: ColumnProps) => {
       }}
     >
       <ColumnHeader name={name} query={query} issueCount={8} />
+      <IssueList />
     </Flex>
   )
 }
