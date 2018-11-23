@@ -20,11 +20,32 @@ interface Board {
 const board: Board = {
   id: 'board-1',
   name: 'Board 1',
-  query: 'org:primer',
+  query: 'org:github is:open is:pr',
   columns: [
-    { id: 'column-1', index: 0, name: 'Column 1', query: 'is:open' },
-    { id: 'column-2', index: 1, name: 'Column 2', query: 'is:open' },
-    { id: 'column-3', index: 2, name: 'Column 3', query: 'is:open' },
+    {
+      id: 'ready',
+      index: 0,
+      name: 'Ready',
+      query: 'review:approved status:sucess',
+    },
+    {
+      id: 'needs-review',
+      index: 1,
+      name: 'Needs review',
+      query: 'review:none status:sucess',
+    },
+    {
+      id: 'changes-requested',
+      index: 2,
+      name: 'Changes requested',
+      query: 'review:changes_requested',
+    },
+    {
+      id: 'failing-checks',
+      index: 2,
+      name: 'Failing checks',
+      query: '-status:success',
+    },
   ],
 }
 
