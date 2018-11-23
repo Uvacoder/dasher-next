@@ -15,7 +15,11 @@ const ColumnList = ({ columns, css }: ColumnListProps) => {
   return (
     <Flex css={css}>
       {columns.map(column => (
-        <Column column={column} css={{ marginRight: theme.spacing[4] }} />
+        <Column
+          key={column.id}
+          column={column}
+          css={{ marginRight: theme.spacing[4] }}
+        />
       ))}
     </Flex>
   )
