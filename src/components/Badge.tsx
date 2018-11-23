@@ -11,7 +11,6 @@ interface BadgeProps {
 
 const Badge = ({ as = 'span', css, children }: BadgeProps) => {
   const theme = useTheme()
-
   return (
     <Base
       as={as}

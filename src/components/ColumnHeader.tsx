@@ -12,7 +12,6 @@ interface ColumnHeaderProps {
 
 const ColumnHeader = ({ name, query, issueCount }: ColumnHeaderProps) => {
   const theme = useTheme()
-
   return (
     <Flex
       css={{

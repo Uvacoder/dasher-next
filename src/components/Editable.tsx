@@ -19,7 +19,6 @@ const Editable = ({
   spellCheck = true,
 }: EditableProps) => {
   const theme = useTheme()
-
   return (
     <Base
       as={as}
