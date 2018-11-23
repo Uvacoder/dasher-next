@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import { CSSObject } from 'styled-components'
 import useTheme from '../utils/useTheme'
 import Badge from './Badge'
-import Base from './Base'
-import Code from './Code'
+import Editable from './Editable'
 import Flex from './Flex'
 
 interface ColumnProps {
@@ -44,20 +43,28 @@ const Column = ({ column, css }: ColumnProps) => {
         }}
       >
         <Flex css={{ alignItems: 'center', margin: `0 0 ${theme.spacing[2]}` }}>
-          <Base
+          <Editable
             as="h2"
+            html={name}
             css={{
               margin: 0,
               fontSize: theme.fontSizes[4],
               fontWeight: theme.fontWeights.semibold,
               lineHeight: theme.lineHeights.tight,
             }}
-          >
-            {name}
-          </Base>
+          />
           <Badge>8</Badge>
         </Flex>
-        <Code css={{ color: theme.colors.grayAlpha[7] }}>{query}</Code>
+        <Editable
+          as="span"
+          html={query}
+          spellCheck={false}
+          css={{
+            alignSelf: 'stretch',
+            fontFamily: theme.fonts.mono,
+            color: theme.colors.grayAlpha[7],
+          }}
+        />
       </Flex>
     </Flex>
   )

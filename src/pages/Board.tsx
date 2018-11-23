@@ -74,7 +74,7 @@ const Board = ({ boardId }: BoardProps) => {
           }}
         >
           <Editable
-            // h1
+            as="h1"
             html={board.name}
             css={{
               margin: `0 0 ${theme.spacing[2]}`,
@@ -84,8 +84,9 @@ const Board = ({ boardId }: BoardProps) => {
             }}
           />
           <Editable
-            // span
+            as="span"
             html={board.query}
+            spellCheck={false}
             css={{
               fontFamily: theme.fonts.mono,
               color: theme.colors.grayAlpha[7],
