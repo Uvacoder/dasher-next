@@ -26,13 +26,13 @@ const board: Board = {
       id: 'ready',
       index: 0,
       name: 'Ready',
-      query: 'review:approved status:sucess',
+      query: 'review:approved status:success',
     },
     {
       id: 'needs-review',
       index: 1,
       name: 'Needs review',
-      query: 'review:none status:sucess',
+      query: 'review:none status:success',
     },
     {
       id: 'changes-requested',
